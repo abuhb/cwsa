@@ -11,12 +11,12 @@
 }
 
 #main {
-    height: Calc(100vh - 345px);
+    height: Calc(100vh - 340px);
     min-height: 370px;
 }
 
 #account {
-    height: 165px;
+    height: 160px;
     padding: 2px;
 }
 
