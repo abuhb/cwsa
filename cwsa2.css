@@ -1,0 +1,90 @@
+#brand {
+    height: 180px;
+    text-align: center;
+    padding: 10px;
+    padding-top: 30px;
+}
+
+#brand img {
+    width: 80%;
+    margin-bottom: 10px;
+}
+
+#main {
+    height: Calc(100vh - 345px);
+    min-height: 370px;
+}
+
+#account {
+    height: 165px;
+    padding: 2px;
+}
+
+#cws {
+    display: flex;
+}
+
+aside {
+    width: 260px;
+    min-width: 260px;
+    font-size: 1.1rem;
+}
+
+main {
+    min-height: 100vh;
+    padding: 15px;
+    width: 100%;
+    overflow: auto;
+}
+
+#main a {
+color: #fff;
+background: #425563;
+display: box;
+padding: 10px;
+padding-left: 15px;
+border-radius: 15px 0px 0px 15px;
+margin-left: 20px;
+margin-top: 3px;
+}
+
+.sub {
+margin-left: 50px !important;
+font-size: 1rem;
+}
+
+#account a {
+color: #fff;
+background: #425563;
+display: box;
+padding: 10px;
+margin: 2px;
+padding-left: 12px;
+border-radius: 5px;
+width: 98%;
+}
+
+nav svg {
+margin-right: 5px;
+}
+
+nav a:hover {
+    text-decoration: none;
+    background:#768692 !important;
+}
+
+.message {
+padding: 20px;
+background-color: #edff21;
+margin-right: -15px;
+margin-left: -15px;
+margin-top: -15px;
+/* Hide during UX work by changing block to none */
+display: block;
+font-size: 1.2rem;
+margin-bottom: 20px;
+}
+
+h1, h3, h5 {
+    color: #005eb8;
+}
