@@ -14,7 +14,7 @@
     }
 
     main {
-        min-height: Calc(100vh - 293px);
+        min-height: Calc(100vh - 288px);
         padding: 10px;
     }
 
@@ -38,7 +38,7 @@
 
     #patientbanner {
         background: rgb(250,255,0,1);
-        padding-top: 20px;
+        padding-top: 15px;
     }
 
     #searchbar {
@@ -58,7 +58,7 @@
       display: none;
     }
 
-    @media screen and (max-width: 680px) {
+    @media screen and (max-width: 760px) {
         header {
         height: 60px;
         margin-bottom: 0px;
@@ -89,7 +89,7 @@
     
 
     main {
-        min-height: Calc(100vh - 312px);
+        min-height: Calc(100vh - 307px);
         padding: 10px;
     }
 
@@ -106,7 +106,7 @@
 </head>
 <body>
   
-<header class="nhsmidgrey">
+<header class="nhsbrightblue">
 
     <div class="container-xl">
         <div class="row">
@@ -122,12 +122,13 @@
               <input type="text" class="form-control" placeholder="CRN" aria-label="Basic Searcg" aria-describedby="basic-search">
               <div class="input-group-append">
                 <button class="btn nhswarmyellow"><i class="fas fa-caret-right"></i></button>
-                <button class="btn nhsgreen" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-search"></i></button>
+                <button class="btn nhslightgreen" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-search"></i></button>
               </div>
             </div>
         </div>
         
         <div id="quicklinks" class="container col text-right">                      
+                    <i class="fas fa-home"></i>          
                     <i class="far fa-eye"></i>
                     <i class="fas fa-bed"></i>
                     <i class="fas fa-user-md"></i>
@@ -260,7 +261,7 @@
 Content
 </main>
 
-<footer class="nhsblue">
+<footer class="nhsmidgrey">
     <div class="container-xl">
         Made in Wales <i class="fas fa-dragon" style="color:red;"></i> by Aneurin Bevan University Health Board.
 </div>
