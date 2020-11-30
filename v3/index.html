@@ -14,12 +14,12 @@
     }
 
     main {
-        min-height: Calc(100vh - 273px);
+        min-height: Calc(100vh - 293px);
         padding: 10px;
     }
 
     footer {
-        height: 50px;
+        height: 70px;
         padding: 14px;
     }
 
@@ -27,7 +27,7 @@
         font-size: 1.5rem;
         padding: 2px;
         margin-top: 25px;
-        margin-right: 5px;
+        margin-right: 3px;
         color: #fff;
     }
 
@@ -39,14 +39,26 @@
     #patientbanner {
         background: rgb(250,255,0,1);
         padding-top: 20px;
-        border-radius: 8pt;
     }
 
     #searchbar {
         display: none;
     }
 
-    @media screen and (max-width: 500px) {
+    #psh {
+      margin-top: 20px;
+    }
+
+    #psh .input-group {
+      max-width: 250px;
+      margin: auto;
+    }
+
+    #mobsearch {
+      display: none;
+    }
+
+    @media screen and (max-width: 680px) {
         header {
         height: 60px;
         margin-bottom: 0px;
@@ -69,13 +81,24 @@
             display: block;
         }
 
-        #patientbanner {
-        border-radius: 0pt;
-    }
+
+        #mobsearch {
+          display: block;
+          padding: 8px;
+        }
+    
 
     main {
-        min-height: Calc(100vh - 238px);
+        min-height: Calc(100vh - 312px);
         padding: 10px;
+    }
+
+    #psh {
+      display: none;
+    }
+
+    .mb-3, .my-3 {
+      margin-bottom: 0px !important;
     }
 
     }
@@ -85,18 +108,26 @@
   
 <header class="nhsmidgrey">
 
-    <div class="container">
+    <div class="container-xl">
         <div class="row">
 
-        <div class="col-5">
+        <div class="col-4">
           <a href="/">
             <img id="logo" src="cwsa-logo.svg">
         </a>
         </div>
         
-        <div id="quicklinks" class="container col-7 text-right"> 
-            <a href="#" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-search"></i></a>                     
-                <a href="/"><i class="fas fa-home"></i></a>
+        <div id="psh" class="col-4">
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="CRN" aria-label="Basic Searcg" aria-describedby="basic-search">
+              <div class="input-group-append">
+                <button class="btn nhswarmyellow"><i class="fas fa-caret-right"></i></button>
+                <button class="btn nhsgreen" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-search"></i></button>
+              </div>
+            </div>
+        </div>
+        
+        <div id="quicklinks" class="container col text-right">                      
                     <i class="far fa-eye"></i>
                     <i class="fas fa-bed"></i>
                     <i class="fas fa-user-md"></i>
@@ -109,6 +140,17 @@
     </div>
 
 </header>  
+
+<!-- Mobile Search -->
+<div id="mobsearch" class="nhsdarkgrey">
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" placeholder="CRN" aria-label="Basic Searcg" aria-describedby="basic-search">
+      <div class="input-group-append">
+        <button class="btn nhswarmyellow"><i class="fas fa-caret-right"></i></button>
+        <button class="btn nhsgreen" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-search"></i></button>
+      </div>
+    </div>
+</div>
 
 <!-- Patient Search Modal -->
   
@@ -123,7 +165,7 @@
           </button>
         </div>
         <div class="modal-body">
-          <h5>Go to Patient</h5>
+          <!-- <h5>Go to Patient</h5>
           <p>If you know the CRN we can take you directly to the patient record.</p>
           
           <div class="input-group mb-3">
@@ -133,7 +175,7 @@
             </div>
           </div>
 <br>
-          <hr>
+          <hr> -->
           <h5>Advanced Search</h5>
           
           <form>
@@ -182,7 +224,7 @@
 
 
 
-<div id="patientbanner" class="container">
+<div id="patientbanner" class="container-xl">
     
     <div class="container">
     <div class="row">
@@ -218,7 +260,7 @@
 Content
 </main>
 
-<footer class="nhsdarkgrey">
+<footer class="nhsblue">
     <div class="container-xl">
         Made in Wales <i class="fas fa-dragon" style="color:red;"></i> by Aneurin Bevan University Health Board.
 </div>
