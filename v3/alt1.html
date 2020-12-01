@@ -14,7 +14,7 @@
     }
 
     main {
-        min-height: Calc(100vh - 259px);
+        min-height: Calc(100vh - 287px);
         padding: 10px;
     }
 
@@ -39,8 +39,6 @@
     .patientbanner {
         /* background: rgb(250,255,0); */
         padding-top: 15px;
-        padding-bottom: 10px;
-        color: #000;
     }
 
     #searchbar {
@@ -60,12 +58,8 @@
       display: none;
     }
 
-    #ptbardrop {
-      font-size: 0.8rem;
-    }
-
-    .extcol {
-      background: #D6FFE6;
+    .dropdown-menu {
+      padding: 0px !important;
     }
 
     @media screen and (max-width: 750px) {
@@ -83,7 +77,7 @@
         #quicklinks i {
         font-size: 1.3rem;
         margin-top: 19px;
-        margin-right: 3px;
+        margin-right: 6px;
         color: #fff;
         }
 
@@ -96,14 +90,10 @@
           display: block;
           padding: 8px;
         }
-
-        #home, #settings {
-          display:none;
-        }
     
 
     main {
-        min-height: Calc(100vh - 293px);
+        min-height: Calc(100vh - 307px);
         padding: 10px;
     }
 
@@ -117,18 +107,10 @@
 
     }
 </style>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script>
-  $(document).ready(function(){
-    $("#extbanner").click(function(){
-      $("#ptbardrop").toggle();
-    });
-  });
-  </script>
 </head>
 <body>
   
-<header class="nhsdarkgrey">
+<header class="nhsbrightblue">
 
     <div class="container-xl">
         <div class="row">
@@ -150,12 +132,12 @@
         </div>
         
         <div id="quicklinks" class="col text-right">                      
-                    <i id="home" class="fas fa-home"></i>          
-                    <i id="watch" class="far fa-eye"></i>
-                    <i id="ward" class="fas fa-bed"></i>
-                    <i id="consultant" class="fas fa-user-md"></i>
-                    <i id="settings" class="fas fa-cog"></i></li>
-                    <i id="signout" class="fas fa-sign-out-alt"></i>
+                    <i class="fas fa-home"></i>          
+                    <i class="far fa-eye"></i>
+                    <i class="fas fa-bed"></i>
+                    <i class="fas fa-user-md"></i>
+                    <i class="fas fa-cog"></i></li>
+                    <i class="fas fa-sign-out-alt"></i>
                 </ul>
         </div>
 
@@ -246,8 +228,8 @@
 <!-- End Patient Search Modal-->
 
 
-<a id="extbanner" href="#" style="text-decoration : none">
-<div class="nhsgreen patientbanner">
+
+<div class="nhsyellow patientbanner">
     
     <div class="container-xl">
     <div class="row">
@@ -272,16 +254,13 @@
 
     <div class="row">
         <div class="col text-center">
-        </div>
-        </div>
-        </div>
-        </div>
+          <div class="dropdown"> 
+            <a id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<img src="chevron.svg" height=20>
+            </a>
+
 <!-- Dropdown -->
-<div id="ptbardrop" class="patientbanner extcol" style="display:none;">
-  <div class="container-xl">
-    <div class="alert nhsyellow">
-    <span style="font-size: 1.1rem;"><i class="fas fa-exclamation-triangle"></i> Patient is allergic to Penecillin.</span>
-  </div>
+<div class="patientbanner container-xl nhspalegrey">
   <div class="row">
 
 <div class="col-6">
@@ -341,21 +320,24 @@ Tel: 014 525 6622</p>
 </div>
 
 </div>
-
-</a>
 <!-- Dropdown -->
 
-
+</div> 
+</div>
+</div>
+</div>
+</div>
 
 <main class="container-xl">
 Content
 </main>
 
-<footer class="nhsblack">
+<footer class="nhsdarkgrey">
     <div class="container-xl">
         Made in Wales <i class="fas fa-dragon" style="color:red;"></i> by Aneurin Bevan University Health Board.
 </div>
 </footer>
+
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
