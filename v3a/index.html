@@ -85,8 +85,8 @@
         }
 
         #quicklinks i {
-        font-size: 1.3rem;
-        margin-top: 19px;
+        font-size: 1.4rem;
+        margin-top: 18px;
         margin-right: 3px;
         color: #fff;
         }
@@ -95,19 +95,13 @@
             display: block;
         }
 
-
-        #mobsearch {
-          display: block;
-          padding: 8px;
-        }
-
-        #home, #settings {
-          display:none;
+        #settings {
+          display: none;
         }
     
 
     main {
-        min-height: Calc(100vh - 293px);
+        min-height: Calc(100vh - 239px);
         padding: 10px;
     }
 
@@ -126,6 +120,10 @@
     #mobalert {
       display:block;
     }
+
+    #mobsearch {
+display: inline;
+}
 
     }
 </style>
@@ -161,11 +159,12 @@
             </div>
         </div>
         
-        <div id="quicklinks" class="col text-right">                      
-                    <i id="home" class="fas fa-home"></i>          
-                    <i id="watch" class="far fa-eye"></i>
-                    <i id="ward" class="fas fa-bed"></i>
-                    <i id="consultant" class="fas fa-user-md"></i>
+        <div id="quicklinks" class="col text-right"> 
+          <a data-toggle="modal" data-target="#exampleModal"><i id="mobsearch" class="fas fa-search"></i></a>                
+                    <i id="home" class="fas fa-home"></i> 
+                    <i id="watch" class="far fa-eye"></i> 
+                    <i id="ward" class="fas fa-bed"></i>  
+                    <i id="consultant" class="fas fa-user-md"></i> 
                     <i id="settings" class="fas fa-cog"></i></li>
                     <i id="signout" class="fas fa-sign-out-alt"></i>
                 </ul>
@@ -177,7 +176,7 @@
 </header>  
 
 <!-- Mobile Search -->
-<div id="mobsearch" class="nhsdarkgrey">
+<!-- <div id="mobsearch" class="nhsdarkgrey">
     <div class="input-group mb-3">
       <input type="text" class="form-control" placeholder="CRN" aria-label="Basic Search" aria-describedby="basic-search">
       <div class="input-group-append">
@@ -185,7 +184,7 @@
         <button class="btn nhslightgreen" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-search"></i></button>
       </div>
     </div>
-</div>
+</div> -->
 
 <!-- Patient Search Modal -->
   
@@ -200,7 +199,7 @@
           </button>
         </div>
         <div class="modal-body">
-          <!-- <h5>Go to Patient</h5>
+          <h5>Go to Patient</h5>
           <p>If you know the CRN we can take you directly to the patient record.</p>
           
           <div class="input-group mb-3">
@@ -210,8 +209,8 @@
             </div>
           </div>
 <br>
-          <hr> -->
-          <!-- <h5>Advanced Search</h5> -->
+          <hr>
+ <h5>Advanced Search</h5>
           
           <form>
             <div class="form-group row">
