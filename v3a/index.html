@@ -135,6 +135,15 @@ display: inline;
     });
   });
   </script>
+
+<script>
+  $(document).ready(function(){
+      $("#exampleModal").on('shown.bs.modal', function(){
+          $(this).find('input[name="crn"]').focus();
+      });
+  });
+  </script>
+
 </head>
 <body>
   
