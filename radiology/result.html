@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radiology Result Detail</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://abuhb.github.io/ui/nhs-colours.css">
+    <script src="https://abuhb.github.io/ui/fontawesome/js/all.js"></script>
+</head>
+<body>
+    
+<div class="container-xl">
+
+    <div class="row">
+        <div class="col-6">
+            <h3>Radiology Results
+                <button type="button" class="btn" data-bs-toggle="tooltip" data-bs-placement="bottom" title="PAS details do not match these on Radis.  Click here to report.">
+                    <i class="fas fa-exclamation-circle text-warning"></i>
+                  </button>
+            </h3>
+        </div>
+        <div class="col-6 text-end">
+            Radiology No. ABB4091400
+        </div>
+    </div>
+
+    <div class="alert nhsyellow">This report is not a replacement for the official copy supplied by the
+    Radiology Department and must not be filed.
+    </div>
+
+    <h4>Orthopaedic pinning upper limb Rt</h4>
+    <p>Films seen and assessed by clinicians, no radiological report by agreement.</p>
+
+    <b>Report Status:</b> Validated<br>
+    <b>Department:</b> NEVILL HALL<br>
+    <b>Visit Date:</b> 26/09/2019<br>
+    <b>Report Author:</b> XX REPORTING ADMINISTRATOR
+
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+          return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+        </script>
+</body>
+</html>

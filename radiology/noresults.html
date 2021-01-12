@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radiology Result Detail</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://abuhb.github.io/ui/nhs-colours.css">
+    <script src="https://abuhb.github.io/ui/fontawesome/js/all.js"></script>
+</head>
+<body>
+    
+<div class="container-xl">
+
+    <div class="row">
+        <div class="col-6">
+            <h3>Radiology Results
+                <button type="button" class="btn" data-bs-toggle="tooltip" data-bs-placement="bottom" title="PAS details do not match these on Radis.  Click here to report.">
+                    <i class="fas fa-exclamation-circle text-warning"></i>
+                  </button>
+            </h3>
+        </div>
+        <div class="col-6 text-end">
+            Radiology No. ABB4091400
+        </div>
+    </div>
+
+<p style="color:red">
+    No Radiology Reports for this patient.</p>
+    <p>
+    The Radiology database does not contain a patient with this CRN.</p>
+    <p>
+    Results for this patient may be stored under another number which can beaccessed by carrying out a patient search using the patient's PAS demographics Click on Radiology/Pathology number to retrieve the result after searching.
+</p>
+
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+          return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+        </script>
+</body>
+</html>
