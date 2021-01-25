@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+}
+
+#regForm {
+  background-color: #ffffff;
+  margin: 20px auto;
+  padding: 40px;
+  width: 95%;
+  min-width: 300px;
+  max-width: 1200px;
+}
+
+h1 {
+  text-align: center;  
+}
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+
+button {
+  background-color: #005EB8;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+#prevBtn {
+  background-color: #425563;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 40px;
+  width: 40px;
+  margin: 0 2px;
+  background: #E8EDEE;
+  border: none;  
+  border-radius: 50%;
+  display: inline-block;
+  padding-top: 8px;
+  /* opacity: 0.5; */
+}
+
+.step.active {
+  opacity: 1;
+  background: #0072CE;
+  color: #fff;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+background: #003087;
+color: #fff;
+}
+</style>
+<body>
+
+<form id="regForm" action="/action_page.php">
+    <!-- Circles which indicates the steps of the form: -->
+    <div style="text-align:center;margin-top:40px;">
+      <span class="step">1</span>
+      <span class="step">2</span>
+      <span class="step">3</span>
+      <span class="step">4</span>
+      <span class="step">5</span>
+      <span class="step">6</span>
+      <span class="step">7</span>
+    </div>
+  <h1>Admit Patient</h1>
+  <!-- One "tab" for each step in the form: -->
+  <div class="tab"><h3>Attending Specialty</h3>
+    <!-- Form Screen 1-->
+    <p>
+    <select class="form-select" aria-label="Sekect a Specialty">
+      <option value="1" selected>Assessment - General Surgery</option>
+      <option value="2">General Surgery</option>
+    </select>
+  </p>
+    <!-- Form Screen 1-->
+  </div>
+  <div class="tab"><h3>Attending Consultant</h3>
+    <!-- Form Screen 2-->
+    <p>
+      <select class="form-select" aria-label="Sekect a Specialty">
+        <option value="1" selected>Jake Testerson</option>
+        <option value="2">Test Simmonds</option>
+      </select>
+    </p>
+    <!-- Form Screen 2-->
+  </div>
+  <div class="tab"><h3>Patient Category / Overseas</h3>
+    <!-- Form Screen 3-->
+    <h5>Patient Category</h5>
+    <p>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="pt-category" id="pt-category1" checked>
+        <label class="form-check-label" for="pt-category1">
+          NHS
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="pt-category" id="pt-category2">
+        <label class="form-check-label" for="pt-category2">
+            Amenity
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="pt-category" id="pt-category3">
+        <label class="form-check-label" for="pt-category3">
+          Private
+        </label>
+      </div>
+</p>
+<h5>Overseas Visitors</h5>
+<p>
+  Is this patient an Overseas Visitor?
+  </p>
+  <p>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="pt-overseas" id="pt-overseas1" checked>
+    <label class="form-check-label" for="pt-overseas1">
+      No
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="pt-overseas" id="pt-overseas2">
+    <label class="form-check-label" for="pt-overseas2">
+        Yes
+    </label>
+  </div>
+</p>
+    <!-- Form Screen 3-->
+  </div>
+  <div class="tab"><h3>Admission Method</h3>
+    <!-- Form Screen 4-->
+    <p>Please specify the method of admission for this patient</p>
+
+    <p>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="pt-admissionmethod" id="pt-admissionmethod1">
+        <label class="form-check-label" for="pt-admissionmethod1">
+            (NICU) NEWBORN BABIES BORN IN TRUST
+        </label>
+      </div>
+
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="pt-admissionmethod" id="pt-admissionmethod2">
+        <label class="form-check-label" for="pt-admissionmethod2">
+            (NICU) NEWBORN BABIES BORN OUTSIDE HOSPITAL (EXCL PLANNED HOME BIRTHS) 
+        </label>
+      </div>
+
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="pt-admissionmethod" id="pt-admissionmethod3">
+        <label class="form-check-label" for="pt-admissionmethod3">
+            BOOKED/PLANNED **DO NOT USE FOR MATERNITY **
+        </label>
+      </div>
+
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="pt-admissionmethod" id="pt-admissionmethod4" checked>
+        <label class="form-check-label" for="pt-admissionmethod4">
+            ELECTIVE WAITING LIST
+        </label>
+      </div>
+
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="pt-admissionmethod" id="pt-admissionmethod5">
+        <label class="form-check-label" for="pt-admissionmethod5">
+            EMERGENCY (INC PLANNED HOME BIRTH NEWBORN BABIES) 
+        </label>
+      </div>
+
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="pt-admissionmethod" id="pt-admissionmethod6">
+        <label class="form-check-label" for="pt-admissionmethod6">
+            MATERNITY
+        </label>
+      </div>
+
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="pt-admissionmethod" id="pt-admissionmethod7">
+        <label class="form-check-label" for="pt-admissionmethod7">
+            TRANSFER FROM ANOTHER HOSPITAL
+        </label>
+      </div>
+
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="pt-admissionmethod" id="pt-admissionmethod8">
+        <label class="form-check-label" for="pt-admissionmethod8">
+            TRANSFER IN FROM DAYCASE UNIT (RGH ONLY)
+        </label>
+      </div>
+
+</p>
+    <!-- Form Screen 4-->
+  </div>
+  <div class="tab"><h3>Intended Overnight Stay</h3>
+    <!-- Form Screen 5-->
+    <p>
+      Is this patient intended for an overnight stay?
+  </p>
+  <p>
+      <div class="form-check">
+          <input class="form-check-input" type="radio" name="pt-overnight" id="pt-overnight1" checked>
+          <label class="form-check-label" for="pt-overnight1">
+              Yes
+          </label>
+        </div>
+  
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="pt-overnight" id="pt-overnight2">
+          <label class="form-check-label" for="pt-overnight2">
+              No
+          </label>
+        </div>   
+  </p>
+    <!-- Form Screen 5-->
+  </div>
+  <div class="tab"><h3>Admission Source</h3>
+    <!-- Form Screen 6-->
+    <p>
+      Please specify the method of admission for this patient
+      </p>
+      <p>
+  
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="admissionsource" id="admissionsource1">
+              <label class="form-check-label" for="admissionsource1">
+                  BABY ACTIVITY
+              </label>
+            </div>
+  
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="admissionsource" id="admissionsource2" checked>
+              <label class="form-check-label" for="admissionsource2">
+                  HOSPICE
+              </label>
+            </div>
+  
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="admissionsource" id="admissionsource3">
+              <label class="form-check-label" for="admissionsource3">
+                  LOCAL AUTHORITY FOSTER CARE
+              </label>
+            </div>
+  
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="admissionsource" id="admissionsource4">
+              <label class="form-check-label" for="admissionsource4">
+                  LOCAL AUTHORITY RESIDENTIAL HOME
+              </label>
+            </div>
+  
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="admissionsource" id="admissionsource5">
+              <label class="form-check-label" for="admissionsource5">
+                  NO FIXED ABODE
+              </label>
+            </div>
+  
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="admissionsource" id="admissionsource6">
+              <label class="form-check-label" for="admissionsource6">
+                  OWN HOME
+              </label>
+            </div>
+  
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="admissionsource" id="admissionsource7">
+              <label class="form-check-label" for="admissionsource7">
+                  PATIENT TRANSFER FROM NON NHS HOSPITAL, INCLUDES PRIVATE HOSPITAL E.G. BUPA 
+              </label>
+            </div>
+  
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="admissionsource" id="admissionsource8">
+              <label class="form-check-label" for="admissionsource8">
+                  PERMANENT RESIDENCE AT NURSING HOME, RESDIENTIAL CARE HOME 
+              </label>
+            </div>
+  
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="admissionsource" id="admissionsource9">
+              <label class="form-check-label" for="admissionsource9">
+                  PRISON/ COURT/POLICE STATION/POLICE CUSTODY SUITE 
+              </label>
+            </div>
+  
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="admissionsource" id="admissionsource10">
+              <label class="form-check-label" for="admissionsource10">
+                  TEMPORARY PLACE OF RESIDENCE
+              </label>
+            </div>
+  
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="admissionsource" id="admissionsource11">
+              <label class="form-check-label" for="admissionsource11">
+                  TEMPORARY RESIDENCE AT NURSING HOME, RESIDENTIAL CARE HOME 
+              </label>
+            </div>
+  
+      </p>
+    <!-- Form Screen 6-->
+  </div>
+  <div class="tab"><h3>Presenting Complaints & Comments</h3>
+    <!-- Form Screen 7-->
+    <p>
+      <div class="mb-3">
+          <label for="prescomp" class="form-label">Presenting complaint</label>
+          <textarea class="form-control" id="prescomp" rows="3"></textarea>
+        </div>
+  </p>
+  
+  <p>
+      <div class="mb-3">
+          <label for="comments" class="form-label">Comments</label>
+          <textarea class="form-control" id="comments" rows="3"></textarea>
+        </div>
+  </p>
+    <!-- Form Screen 7-->
+  </div>
+  <div style="overflow:auto;">
+    <div style="float:right;">
+      <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+      <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+    </div>
+  </div>
+
+</form>
+
+<script>
+var currentTab = 0; // Current tab is set to be the first tab (0)
+showTab(currentTab); // Display the current tab
+
+function showTab(n) {
+  // This function will display the specified tab of the form...
+  var x = document.getElementsByClassName("tab");
+  x[n].style.display = "block";
+  //... and fix the Previous/Next buttons:
+  if (n == 0) {
+    document.getElementById("prevBtn").style.display = "none";
+  } else {
+    document.getElementById("prevBtn").style.display = "inline";
+  }
+  if (n == (x.length - 1)) {
+    document.getElementById("nextBtn").innerHTML = "Complete Admission";
+  } else {
+    document.getElementById("nextBtn").innerHTML = "Next";
+  }
+  //... and run a function that will display the correct step indicator:
+  fixStepIndicator(n)
+}
+
+function nextPrev(n) {
+  // This function will figure out which tab to display
+  var x = document.getElementsByClassName("tab");
+  // Exit the function if any field in the current tab is invalid:
+  if (n == 1 && !validateForm()) return false;
+  // Hide the current tab:
+  x[currentTab].style.display = "none";
+  // Increase or decrease the current tab by 1:
+  currentTab = currentTab + n;
+  // if you have reached the end of the form...
+  if (currentTab >= x.length) {
+    // ... the form gets submitted:
+    document.getElementById("regForm").submit();
+    return false;
+  }
+  // Otherwise, display the correct tab:
+  showTab(currentTab);
+}
+
+function validateForm() {
+  // This function deals with validation of the form fields
+  var x, y, i, valid = true;
+  x = document.getElementsByClassName("tab");
+  y = x[currentTab].getElementsByTagName("input");
+  // A loop that checks every input field in the current tab:
+  for (i = 0; i < y.length; i++) {
+    // If a field is empty...
+    if (y[i].value == "") {
+      // add an "invalid" class to the field:
+      y[i].className += " invalid";
+      // and set the current valid status to false
+      valid = false;
+    }
+  }
+  // If the valid status is true, mark the step as finished and valid:
+  if (valid) {
+    document.getElementsByClassName("step")[currentTab].className += " finish";
+  }
+  return valid; // return the valid status
+}
+
+function fixStepIndicator(n) {
+  // This function removes the "active" class of all steps...
+  var i, x = document.getElementsByClassName("step");
+  for (i = 0; i < x.length; i++) {
+    x[i].className = x[i].className.replace(" active", "");
+  }
+  //... and adds the "active" class on the current step:
+  x[n].className += " active";
+}
+</script>
+
+</body>
+</html>
