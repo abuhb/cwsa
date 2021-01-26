@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>Admission Form (Simplified)</title>
+    <style>
+        .adm-hl {
+            background: #fff;
+            padding: 10px;
+            margin-bottom: 40px;
+        }
+
+        .adm-hl2 {
+            background: rgb(65,182,230,0.2);
+            padding: 10px;
+            margin-bottom: 40px;
+            border-radius: 5pt;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Admission Form</h1>
+<br>
+
+    <!-- Stage 2 -->
+    <div class="adm-hl2">
+<h3>Patient Details</h3>
+<b>Category:</b> 
+<div class="form-check form-check-inline">
+    <label class="form-check-label">
+    <input type="radio" class="form-check-input" name="category" value="NHS">
+    NHS
+  </label>
+  </div>
+  <div class="form-check form-check-inline">
+    <label class="form-check-label">
+    <input type="radio" class="form-check-input" name="category" value="Private">
+    Private
+  </label>
+  </div>
+  <div class="form-check form-check-inline">
+    <label class="form-check-label">
+    <input type="radio" class="form-check-input" name="category" value="Amenity">
+    Amenity
+  </label>
+</div>
+<br>
+<div class="form-check">
+  <label class="form-check-label">
+    <input type="checkbox" class="form-check-input" name="overseas" value="Overseas Visitor">
+    Patient is an Overseas Visitor
+  </label>
+</div>
+</div>
+    <!-- Stage 2 -->
+
+    <!-- Stage 3 -->
+
+<div class="adm-hl">
+<div class="row">
+    <h3>Admission Type</h3>
+    <div class="col-xs-12 col-sm-6">
+<div class="form-group">
+  <label for="method"><b>Method</b></label>
+  <select class="form-control" name="method">
+    <option>(NICU) NEWBORN BABIES BORN IN TRUST</option>
+    <option>(NICU) NEWBORN BABIES BORN OUTSIDE HOSPITAL (EXCL PLANNED HOME BIRTHS)</option>
+    <option>BOOKED/PLANNED **DO NOT USE FOR MATERNITY **</option>
+    <option>ELECTIVE WAITING LIST</option>
+    <option>EMERGENCY (INC PLANNED HOME BIRTH NEWBORN BABIES)</option>
+    <option>MATERNITY</option>
+    <option>TRANSFER FROM ANOTHER HOSPITAL</option>
+    <option>TRANSFER IN FROM DAYCASE UNIT (RGH ONLY)</option>
+  </select>
+</div>
+    </div>
+    <div class="col-xs-12 col-sm-6">
+<div class="form-group">
+  <label for="source"><b>Source</b></label>
+  <select class="form-control" name="source">
+    <option>BABY ACTIVITY</option>
+    <option>HOSPICE</option>
+    <option>LOCAL AUTHORITY FOSTER CARE</option>
+    <option>LOCAL AUTHORITY RESIDENTIAL HOME</option>
+    <option>NO FIXED ABODE</option>
+    <option>OWN HOME</option>
+    <option>PATIENT TRANSFER FROM NON NHS HOSPITAL, INCLUDES PRIVATE HOSPITAL E.G. BUPA</option>
+    <option>PERMANENT RESIDENCE AT NURSING HOME, RESDIENTIAL CARE HOME</option>
+    <option>PRISON/ COURT/POLICE STATION/POLICE CUSTODY SUITE</option>
+    <option>TEMPORARY PLACE OF RESIDENCE</option>
+    <option>TEMPORARY RESIDENCE AT NURSING HOME, RESIDENTIAL CARE HOME</option>
+  </select>
+</div>
+    </div>
+</div>
+</div>
+
+        <!-- Stage 3 -->
+
+        <!-- Stage 4 -->
+
+<!-- Stage 1 -->
+<div class="adm-hl2">
+<div class="row">
+    <h3>Admission Details</h3>
+    <div class="col-xs-12 col-sm-6">
+<div class="form-group">
+  <label for="">Attending Specialty</label>
+  <select class="form-control" name="specialty" id="">
+    <option>Surgery</option>
+    <option>Medicine</option>
+    <option>Emergency</option>
+  </select>
+</div>
+    </div>
+    <div class="col-xs-12 col-sm-6">
+<div class="form-group">
+  <label for="">Consultant</label>
+  <select class="form-control" name="consultant" id="">
+    <option>Consultant1</option>
+    <option>Consultant2</option>
+    <option>Consultant3</option>
+  </select>
+</div>
+    </div>
+    
+</div>
+    <!-- Stage 1 -->
+    <br>
+<div class="row">
+    <div class="col-xs-12 col-sm-4">
+        <div class="form-group">
+          <label for="">Hospital</label>
+          <select class="form-control" name="" id="">
+            <option>The Grange University Hospital</option>
+            <option>Royal Gwent Hospital</option>
+            <option>Nevill Hall Hospital</option>
+          </select>
+        </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-4">
+        <div class="form-group">
+            <label for="">Ward</label>
+            <select class="form-control" name="" id="">
+              <option></option>
+              <option></option>
+              <option></option>
+            </select>
+          </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-4">
+        <div class="form-group">
+            <label for="">Bed</label>
+            <select class="form-control" name="" id="">
+              <option></option>
+              <option></option>
+              <option></option>
+            </select>
+          </div>
+    </div>
+
+</div>
+</div>
+        <!-- Stage 4 -->
+
+        <!-- Stage 5 -->
+        <div class="adm-hl">
+<div class="row">
+    <h3>Presenting</h3>
+    <div class="col-xs-12 col-sm-6">
+<div class="form-group">
+  <label for="presenting-complaint"><b>Presenting Complaint</b></label>
+  <textarea class="form-control" name="presenting-complaint" rows="3"></textarea>
+</div>
+    </div>
+    <div class="col-xs-12 col-sm-6">
+<div class="form-group">
+  <label for="comments"><b>Comments</b></label>
+  <textarea class="form-control" name="comments" rows="3"></textarea>
+</div>
+    </div>
+</div>
+</div>
+        <!-- Stage 5 -->
+        <br>
+<!-- Complete -->
+<a name="" id="" class="btn btn-success" href="#" role="button">Complete Admission</a>
+<p>&nbsp;</p>
+</div>
+</body>
+</html>
